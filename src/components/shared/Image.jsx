@@ -11,7 +11,7 @@ const Image = ({ className, src, alt }) => {
 Image.propTypes = {
 	src: PropTypes.string.isRequired,
 	alt: PropTypes.string.isRequired,
-	className: PropTypes.string.isRequired,
+	className: PropTypes.string,
 };
 
 export default Image;
