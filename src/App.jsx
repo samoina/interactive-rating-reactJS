@@ -1,8 +1,14 @@
+import RatingRequest from './components/RatingRequest';
+import RatingResponse from './components/RatingResponse';
+
 function App() {
 	return (
-		<div>
-			<h1>Interactive Rating Component</h1>
-		</div>
+		<main className="main">
+			<h1 className="main__heading--sr">Interactive Rating Component</h1>
+
+			<RatingRequest />
+			<RatingResponse />
+		</main>
 	);
 }
 

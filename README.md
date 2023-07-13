@@ -59,9 +59,27 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+Since I am learning in public and sharing my progress as I go, I created a Twitter thread and shared these learnings. Check them out on my Twitter profile [here]().
+
 1. The README.md should be in the project's root directory.
 
-2. 
+2. For me to be able to know how to structure the project, I first had to decide - on paper- the components and pages. so I sketched to visualize my approach and identified my components - Image, Text and Button.
+
+3. I started with the Image component. Tried to reference it in 'src' as just a path but this wouldn't render the images. So I needed to import the images first using their relative paths. This way, I created variables that are references to the actual image files and which I could use for the src attribute in the component - and the reminder to put them in {}. I then passed the 'src' and 'alt' as props to the Image Component.
+
+```jsx
+import Image from './shared/Image';
+import icon from '../assets/images/icon-star.svg';
+
+const RatingRequest = () => {
+	return (
+		<div>
+			<Image src={icon} alt="Icon Star" />
+		</div>
+	);
+};
+export default RatingRequest;
+```
 
 ### Continued development
 
