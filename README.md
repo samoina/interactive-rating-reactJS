@@ -81,6 +81,35 @@ const RatingRequest = () => {
 export default RatingRequest;
 ```
 
+Once I did this, I was able to figure out the static bit of the project. The next challenge was how to add the dynamism to it, ie, Initially, the RatingResponse component is hidden initially, and then when the button is clicked it hides RatingRequest and shows RatingResponse. From my learning, I knew this had to do with event handlers and the useState hook. I used the code below but it did not work as I expected.
+
+```jsx
+function App() {
+	const [showRequest, setShowRequest] = useState(true);
+
+	const changeStatus = () => {
+		setShowRequest(!showRequest);
+	};
+
+	return (
+		<main className="main">
+			<h1 className="main__heading--sr">Interactive Rating Component</h1>
+
+			{showRequest ? (
+				<RatingRequest changeStatus={changeStatus} />
+			) : (
+				<RatingResponse />
+			)}
+
+			{/* <RatingRequest onClick={changeStatus} />
+			<RatingResponse /> */}
+		</main>
+	);
+}
+
+export default App;
+```
+
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.

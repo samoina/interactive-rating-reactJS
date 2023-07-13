@@ -3,9 +3,9 @@ import illustration from '../assets/images/illustration-thank-you.svg';
 import Button from './shared/Button';
 import Text from './shared/Text';
 
-const RatingResponse = () => {
+const RatingResponse = ({ className }) => {
 	return (
-		<div className="main__thankyou">
+		<div className={className}>
 			<Image
 				className="main__thankyou--image"
 				src={illustration}

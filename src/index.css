@@ -51,10 +51,6 @@ select {
 	width: 1px;
 }
 
-.main__request {
-	display: none;
-}
-
 .main__request,
 .main__thankyou {
 	background-color: var(--dark-blue);
@@ -110,6 +106,16 @@ select {
 
 .main__thankyou {
 	text-align: center;
+}
+
+.main__thankyou--hide,
+.main__request--hide {
+	display: none;
+}
+
+.main__thankyou--show,
+.main__request--show {
+	display: block;
 }
 
 .main__thankyou--response {

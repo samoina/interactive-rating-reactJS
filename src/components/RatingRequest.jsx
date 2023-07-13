@@ -4,9 +4,13 @@ import Text from './shared/Text';
 import RatingScore from './RatingScore';
 import Button from './shared/Button';
 
-const RatingRequest = () => {
+const RatingRequest = ({ onSubmit, className }) => {
+	const handleSubmit = () => {
+		onSubmit();
+	};
+
 	return (
-		<div className="main__request">
+		<div className={className}>
 			<Image className="main__icon" src={icon} alt="Icon Star" />
 
 			<Text>
@@ -19,7 +23,12 @@ const RatingRequest = () => {
 
 			<RatingScore />
 
-			<Button type="submit" text="SUBMIT" className="main__submit" />
+			<Button
+				type="submit"
+				text="SUBMIT"
+				className="main__submit"
+				onClick={handleSubmit}
+			/>
 		</div>
 	);
 };
