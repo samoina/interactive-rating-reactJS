@@ -11,8 +11,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -32,19 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Request Page](/src/assets/images/Screenshot%201.png)
+![Response Page](/src/assets/images/Screenshot%202.png)
 
 ### Links
 
-- Solution URL: [Github repo]()
+- Solution URL: [Github repo](https://github.com/samoina/interactive-rating-reactJS)
 - Live Site URL: [Netlify Link]()
 
 ## My process
@@ -59,7 +50,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Since I am learning in public and sharing my progress as I go, I created a Twitter thread and shared these learnings. Check them out on my Twitter profile [here]().
+Since I am learning in public and sharing my progress as I go, I created a Twitter thread and shared these learnings. Check them out on my Twitter profile [here](https://twitter.com/Samoina/status/1679441282681241601?s=20).
 
 1. The README.md should be in the project's root directory.
 
@@ -145,15 +136,7 @@ function App() {
 
 Solution - set global state in App.jsx and pass callback functions to update stae in the parent component.
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) -
+7. I needed to do some validation so that if a user does not submit any rating, the Thank you page does not show. I came across React Modal - an accessible modal dialog component.
 
 ## Author
 
@@ -163,6 +146,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Giving a hat tip to one [@IanMcBool](https://github.com/IanMcbull) for helping me make sense of how to structure this React mini-project. I had some challenges getting my selected rating to show and he reminded me of the need to make my state global, which is what worked for that dynamism. Thanks Ian!
