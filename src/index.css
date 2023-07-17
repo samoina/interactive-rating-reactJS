@@ -89,7 +89,8 @@ select {
 	cursor: pointer;
 }
 
-.main__submit {
+.main__submit,
+.main__modal {
 	background-color: var(--orange);
 	border: none;
 	color: var(--white);

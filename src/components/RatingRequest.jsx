@@ -14,6 +14,7 @@ const RatingRequest = ({ onSubmit, className, select, rating }) => {
 			<Image className="main__icon" src={icon} alt="Icon Star" />
 
 			<Text>
+				
 				<h2>How did we do?</h2>
 				<p>
 					Please let us know how we did with your support request. All feedback
