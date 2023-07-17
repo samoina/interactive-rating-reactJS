@@ -4,7 +4,7 @@ import Text from './shared/Text';
 import RatingScore from './RatingScore';
 import Button from './shared/Button';
 
-const RatingRequest = ({ onSubmit, className }) => {
+const RatingRequest = ({ onSubmit, className, select, rating }) => {
 	const handleSubmit = () => {
 		onSubmit();
 	};
@@ -21,7 +21,7 @@ const RatingRequest = ({ onSubmit, className }) => {
 				</p>
 			</Text>
 
-			<RatingScore />
+			<RatingScore select={select} rating={rating} />
 
 			<Button
 				type="submit"

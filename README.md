@@ -81,7 +81,7 @@ const RatingRequest = () => {
 export default RatingRequest;
 ```
 
-Once I did this, I was able to figure out the static bit of the project. The next challenge was how to add the dynamism to it, ie, Initially, the RatingResponse component is hidden initially, and then when the button is clicked it hides RatingRequest and shows RatingResponse. From my learning, I knew this had to do with event handlers and the useState hook. I used the code below but it did not work as I expected.
+4. Once I did this, I was able to figure out the static bit of the project. The next challenge was how to add the dynamism to it, ie, Initially, the RatingResponse component is hidden initially, and then when the button is clicked it hides RatingRequest and shows RatingResponse. From my learning, I knew this had to do with event handlers and the useState hook. I used the code below but it did not work as I expected.
 
 ```jsx
 function App() {
@@ -109,6 +109,41 @@ function App() {
 
 export default App;
 ```
+
+5. I built up on the useState and Boolean, and then dynamically set the className for both components. At the onset, the showRequest is set to false (to show the Request and hide the Response). When the button is clicked, the setter function changes it to true (and this hides the Request and shows the Response). Managed to do this with conditional inclusion of the classes and their display on my CSS
+
+```jsx
+function App() {
+	const [showRequest, setShowRequest] = useState(false);
+
+	const handleRequestSubmit = () => {
+		setShowRequest(true);
+	};
+
+	return (
+		<main className="main">
+			<h1 className="main__heading--sr">Interactive Rating Component</h1>
+
+			<RatingRequest
+				onSubmit={handleRequestSubmit}
+				className={`main__request ${
+					showRequest ? 'main__request--hide' : 'main__request--show'
+				}`}
+			/>
+
+			<RatingResponse
+				className={`main__thankyou ${
+					showRequest ? 'main__thankyou--show' : 'main__thankyou--hide'
+				}`}
+			/>
+		</main>
+	);
+}
+```
+
+6. To get the rating selected, I have to set an event handler to each of the List items and set it to the same function, which when called, shows the value selected. I did make a mistake, however, because I set up local state in the RatingScore component and then it was impossible to pass the data from the child components up to the parents.
+
+Solution - set global state in App.jsx and pass callback functions to update stae in the parent component.
 
 ### Continued development
 

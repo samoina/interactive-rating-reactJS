@@ -3,19 +3,18 @@ import illustration from '../assets/images/illustration-thank-you.svg';
 import Button from './shared/Button';
 import Text from './shared/Text';
 
-const RatingResponse = ({ className }) => {
+const RatingResponse = ({ className, userRating }) => {
 	return (
 		<div className={className}>
 			<Image
 				className="main__thankyou--image"
 				src={illustration}
-				alt="Iluustration to show thank you"
+				alt="Illustration to show thank you"
 			/>
 
 			<Button
 				className="main__thankyou--response"
-				text="You selected 4
-        out of 5"
+				text={`You selected ${userRating} out of 5`}
 				type="button"
 			/>
 
