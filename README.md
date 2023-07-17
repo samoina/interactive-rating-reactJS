@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repo](https://github.com/samoina/interactive-rating-reactJS)
-- Live Site URL: [Netlify Link]()
+- Live Site URL: [Netlify Link](https://samoina-interactive-rating-reactjs.netlify.app/)
 
 ## My process
 
